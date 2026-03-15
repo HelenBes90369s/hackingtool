@@ -317,11 +317,11 @@ def build_menu():
     # ── Claude-style dual-line prompt area ──
     console.print(Rule(style="dim magenta"))
     console.print(
-        "  [dim cyan]/[/dim cyan][dim]search  "
-        "[/dim][dim cyan]t[/dim cyan][dim]ags  "
-        "[/dim][dim cyan]r[/dim cyan][dim]ecommend  "
-        "[/dim][dim cyan]?[/dim cyan][dim]help  "
-        "[/dim][dim cyan]q[/dim cyan][dim]uit[/dim]"
+        "  [dim cyan]/[/dim cyan][dim]search[/dim]  "
+        "[dim cyan]t[/dim cyan] [dim]tags[/dim]  "
+        "[dim cyan]r[/dim cyan] [dim]recommend[/dim]  "
+        "[dim cyan]?[/dim cyan] [dim]help[/dim]  "
+        "[dim cyan]q[/dim cyan] [dim]quit[/dim]"
     )
 
 
