@@ -67,6 +67,11 @@ hackingtool
 ## 🗒️ Personal Notes
 
 > I'm using this fork primarily to learn about network reconnaissance and information gathering tools. The SQL injection and web attack sections have been most useful for my CTF practice on platforms like HackTheBox and TryHackMe.
+>
+> **Tools I've found most useful so far:**
+> - `nmap` (Information Gathering) — bread and butter for recon
+> - `sqlmap` (SQL Injection) — great for SQLi challenges on HTB
+> - `gobuster` (Web Attack) — fast directory brute-forcing
 
 ## 🤝 Contributing
 
