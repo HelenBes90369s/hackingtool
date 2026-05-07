@@ -49,7 +49,8 @@ def check_root():
 
 def check_dependencies():
     """Check if required system dependencies are installed."""
-    dependencies = ["git", "python3", "pip3"]
+    # Added curl to dependencies -- several tools in the framework rely on it for downloads
+    dependencies = ["git", "python3", "pip3", "curl"]
     missing = []
 
     for dep in dependencies:
@@ -89,6 +90,4 @@ def show_main_menu():
         ("9",  "Forensic Tools"),
         ("10", "Payload Creation Tools"),
         ("11", "Exploit Framework Tools"),
-        ("12", "Reverse Engineering Tools"),
-        ("13", "DDOS Attack Tools"),
-        ("14", "Remote Adm
+        ("12", "Reverse En
