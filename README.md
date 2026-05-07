@@ -73,12 +73,14 @@ hackingtool
 > - `sqlmap` (SQL Injection) — great for SQLi challenges on HTB
 > - `gobuster` (Web Attack) — fast directory brute-forcing
 > - `nikto` (Web Attack) — handy for quick web server scans before diving deeper
+> - `ffuf` (Web Attack) — started preferring this over gobuster for vhost fuzzing
 >
 > **CTF tips I keep forgetting:**
 > - Always run `nmap -sV -sC` first for a solid baseline scan
 > - Pair `gobuster` with `-x php,html,txt` on PHP-heavy boxes
 > - Use `nmap -p-` for a full port scan when the default scan misses something — caught a box on a non-standard port (8080, 8443) this way more than once
 > - `sqlmap --level=3 --risk=2` is worth trying if the default run comes up empty
+> - `ffuf -w wordlist.txt -u http://target/ -H "Host: FUZZ.target.htb"` for vhost discovery
 
 ## 🤝 Contributing
 
@@ -98,9 +100,4 @@ This project is licensed under the MIT License — see the [LICENSE](LICENSE) fi
 
 ## 🙏 Credits
 
-- Original project by [Z4nzu](https://github.com/Z4nzu/hackingtool)
-- All tool authors and contributors
-
-## ⭐ Support
-
-If you find this project useful, please consider giving it a star on GitHub!
+- Original project by [Z4nzu](http
