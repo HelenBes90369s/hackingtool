@@ -81,6 +81,7 @@ hackingtool
 > - Use `nmap -p-` for a full port scan when the default scan misses something — caught a box on a non-standard port (8080, 8443) this way more than once
 > - `sqlmap --level=3 --risk=2` is worth trying if the default run comes up empty
 > - `ffuf -w wordlist.txt -u http://target/ -H "Host: FUZZ.target.htb"` for vhost discovery
+> - `feroxbuster` is worth trying as an alternative to `ffuf`/`gobuster` — recursive scanning by default saves a lot of manual follow-up
 
 ## 🤝 Contributing
 
@@ -92,12 +93,4 @@ Use the [Bug Report](.github/ISSUE_TEMPLATE/bug_report.md) template when opening
 
 ### Requesting Features or Tools
 
-Use the [Feature Request](.github/ISSUE_TEMPLATE/feature_request.md) or [Tool Request](.github/ISSUE_TEMPLATE/tool_request.md) templates.
-
-## 📝 License
-
-This project is licensed under the MIT License — see the [LICENSE](LICENSE) file for details.
-
-## 🙏 Credits
-
-- Original project by [Z4nzu](http
+Use the [Feature Request](.github/ISSUE_TEMPLATE/feature_request.md) or [Tool Request](.github/ISSUE_TEMPLATE/tool_request.md) template.
