@@ -72,6 +72,11 @@ hackingtool
 > - `nmap` (Information Gathering) — bread and butter for recon
 > - `sqlmap` (SQL Injection) — great for SQLi challenges on HTB
 > - `gobuster` (Web Attack) — fast directory brute-forcing
+> - `nikto` (Web Attack) — handy for quick web server scans before diving deeper
+>
+> **CTF tips I keep forgetting:**
+> - Always run `nmap -sV -sC` first for a solid baseline scan
+> - Pair `gobuster` with `-x php,html,txt` on PHP-heavy boxes
 
 ## 🤝 Contributing
 
