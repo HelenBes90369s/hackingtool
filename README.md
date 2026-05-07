@@ -77,6 +77,8 @@ hackingtool
 > **CTF tips I keep forgetting:**
 > - Always run `nmap -sV -sC` first for a solid baseline scan
 > - Pair `gobuster` with `-x php,html,txt` on PHP-heavy boxes
+> - Use `nmap -p-` for a full port scan when the default scan misses something — caught a box on a non-standard port (8080, 8443) this way more than once
+> - `sqlmap --level=3 --risk=2` is worth trying if the default run comes up empty
 
 ## 🤝 Contributing
 
