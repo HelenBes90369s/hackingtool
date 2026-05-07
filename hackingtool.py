@@ -40,9 +40,10 @@ def banner():
 def check_root():
     """Check if the script is running with root privileges."""
     if os.geteuid() != 0:
-        print("[!] Warning: Some tools may require root privileges.")
-        print("[!] Consider running with 'sudo' if you encounter permission errors.\n")
-        return False
+        # Changed from a warning to a harder exit -- too many tools silently fail without root
+        print("[!] Error: HackingTool must be run with root privileges.")
+        print("[!] Please re-run using 'sudo python3 hackingtool.py'.")
+        sys.exit(1)
     return True
 
 
@@ -90,51 +91,4 @@ def show_main_menu():
         ("11", "Exploit Framework Tools"),
         ("12", "Reverse Engineering Tools"),
         ("13", "DDOS Attack Tools"),
-        ("14", "Remote Administrator Tools (RAT)"),
-        ("15", "XSS Attack Tools"),
-        ("16", "Steganography Tools"),
-        ("17", "SocialMedia Brute Force"),
-        ("18", "Android Hacking Tools"),
-        ("19", "IDN Homograph Attack Tools"),
-        ("20", "Email Verify Tools"),
-        ("21", "Hash Cracking Tools"),
-        ("22", "Wifi Deauthenticate Tools"),
-        ("23", "SocialMedia Finder"),
-        ("24", "Payload Injector Tools"),
-        ("25", "Server/Web Hacking Tools"),
-        ("99", "Exit"),
-    ]
-
-    for num, name in categories:
-        print(f"  [{num:>2}] {name}")
-
-    print("=" * 60)
-    return input("\n[?] Select a category: ").strip()
-
-
-def main():
-    """Main function to run the HackingTool application."""
-    try:
-        banner()
-        check_root()
-
-        if not check_dependencies():
-            sys.exit(1)
-
-        while True:
-            choice = show_main_menu()
-
-            if choice == "99":
-                print("\n[*] Exiting HackingTool. Stay ethical!\n")
-                sys.exit(0)
-            else:
-                print(f"\n[!] Category '{choice}' is not yet implemented in this version.")
-                input("[*] Press Enter to return to the main menu...")
-
-    except KeyboardInterrupt:
-        print("\n\n[*] Interrupted by user. Exiting...\n")
-        sys.exit(0)
-
-
-if __name__ == "__main__":
-    main()
+        ("14", "Remote Adm
