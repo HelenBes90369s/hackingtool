@@ -82,6 +82,8 @@ hackingtool
 > - `sqlmap --level=3 --risk=2` is worth trying if the default run comes up empty
 > - `ffuf -w wordlist.txt -u http://target/ -H "Host: FUZZ.target.htb"` for vhost discovery
 > - `feroxbuster` is worth trying as an alternative to `ffuf`/`gobuster` — recursive scanning by default saves a lot of manual follow-up
+> - `wfuzz` is another fuzzer worth having in the toolkit — useful when `ffuf` chokes on certain response filtering edge cases
+> - For OSCP-style boxes, `enum4linux-ng` is a solid upgrade over the original `enum4linux` for SMB enumeration
 
 ## 🤝 Contributing
 
@@ -91,6 +93,4 @@ Contributions are welcome! Please read our [Contributing Guidelines](.github/PUL
 
 Use the [Bug Report](.github/ISSUE_TEMPLATE/bug_report.md) template when opening an issue.
 
-### Requesting Features or Tools
-
-Use the [Feature Request](.github/ISSUE_TEMPLATE/feature_request.md) or [Tool Request](.github/ISSUE_TEMPLATE/tool_request.md) template.
+### Requesting Feat
