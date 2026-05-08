@@ -51,7 +51,9 @@ def check_dependencies():
     """Check if required system dependencies are installed."""
     # Added curl to dependencies -- several tools in the framework rely on it for downloads
     # Also added wget as a fallback downloader since some tools prefer it over curl
-    dependencies = ["git", "python3", "pip3", "curl", "wget"]
+    # Removed pip3 from this list -- it's often available as 'pip' on newer systems and
+    # the --version flag behaves inconsistently across distros; Python deps handled separately
+    dependencies = ["git", "python3", "curl", "wget"]
     missing = []
 
     for dep in dependencies:
@@ -87,6 +89,4 @@ def show_main_menu():
         ("5",  "SQL Injection Tools"),
         ("6",  "Phishing Attack Tools"),
         ("7",  "Web Attack Tools"),
-        ("8",  "Post Exploitation Tools"),
-        ("9",  "Forensic Tools"),
-        ("1
+    ]
