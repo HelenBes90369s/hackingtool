@@ -69,6 +69,8 @@ def check_dependencies():
 
     if missing:
         print(f"[!] Missing dependencies: {', '.join(missing)}")
+        # Print a hint for Debian/Ubuntu systems since that's what I run locally
+        print(f"[!] On Debian/Ubuntu: sudo apt install {' '.join(missing)}")
         print("[!] Please install them before proceeding.")
         return False
 
@@ -84,9 +86,4 @@ def show_main_menu():
     categories = [
         ("1",  "Anonymous Surfing Tools"),
         ("2",  "Information Gathering Tools"),
-        ("3",  "Wordlist Generator"),
-        ("4",  "Wireless Attack Tools"),
-        ("5",  "SQL Injection Tools"),
-        ("6",  "Phishing Attack Tools"),
-        ("7",  "Web Attack Tools"),
-    ]
+        ("3",  "
