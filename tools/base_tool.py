@@ -76,6 +76,8 @@ class BaseTool(ABC):
 
         Args:
             target_dir: Directory under which the repo will be cloned.
+                        Defaults to '/opt', but I personally prefer '~/tools'
+                        to avoid needing sudo for every clone.
 
         Returns:
             True if cloning succeeded, False otherwise.
@@ -89,22 +91,3 @@ class BaseTool(ABC):
 
         if os.path.isdir(dest):
             print(f"[*] Repository already exists at {dest}. Skipping clone.")
-            return True
-
-        print(f"[*] Cloning {self.repo_url} into {dest} ...")
-        try:
-            subprocess.run(
-                ["git", "clone", "--depth", "1", self.repo_url, dest],
-                check=True,
-                stdout=subprocess.PIPE,
-                stderr=subprocess.PIPE,
-                text=True,
-            )
-            print(f"[+] Cloned successfully to {dest}.")
-            return True
-        except subprocess.CalledProcessError as exc:
-            print(f"[-] Git clone failed: {exc.stderr}")
-            return False
-
-    def __repr__(self) -> str:  # pragma: no cover
-        return f"<Tool name={self.name!r} installed={self.is_installed()}>"
